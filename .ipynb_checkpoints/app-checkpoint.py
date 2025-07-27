@@ -39,9 +39,8 @@ st.title("Resume Screener")
 uploaded_file = st.file_uploader("Upload resume (PDF / TXT)", type=["pdf", "txt"])
 
 if uploaded_file is not None:
-   if uploaded_file.size > 200 * 1024 * 1024:  
-    st.error("File size exceeds 200 MB limit.")
-
+    if uploaded_file.size > 200 * 1024 * 1024:  
+        st.error("File size exceeds 200 MB limit.")
     else:
         # Extract text
         text = ""
